@@ -1,0 +1,357 @@
+body {
+    background-color: #e9e9e9;
+}
+
+* {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+/*======================载入时表现================*/
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 100px auto;
+  background-color: #f9af20;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+ #loader{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: #f8f8f8;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: box;
+    display: flexbox;
+    display: flex;
+ }
+ #loader > .loader-inner {
+     -webkit-box-flex: 1;
+     -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: box;
+     display: flexbox;
+     display: flex;
+
+     -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+     -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+ }
+ #loader > .loader-inner{
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
+ }
+ .hidden{
+    height: 0px;
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+    overflow:hidden;
+ }
+
+
+.swiper-slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+                display: -ms-flexbox;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: box;
+                display: flexbox;
+                display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+            background-color: #e9e9e9;
+    max-height: 100%;
+}
+.composition{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+                display: -ms-flexbox;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: box;
+                display: flexbox;
+                display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.hide {
+    visibility: hidden !important;
+}
+.slide1 , .slide2 , .slide3{
+  background-size: 100% 100%;
+  background-image: url("../img/bg.jpg");
+}
+.slide4{
+  background-size: 100% 100%;
+  background-image: url("../img/slide4-bg.png");
+}
+/* 雪花飘落 */
+#snowDown{
+    z-index: 999;
+    position: absolute;
+}
+.roll{ 
+    position:absolute; 
+    opacity:0; 
+    animation: mysnow 5s ; 
+    -webkit-animation: mysnow 5s ; 
+    height:40px; 
+    z-index:9999;
+} 
+.snowItem{
+    position: absolute;
+    z-index: 65532;
+    display: inline-block;
+    height:40px;
+    width:40px;
+}
+@-webkit-keyframes mysnow{ 
+    0%{ 
+        bottom:100%; 
+        opacity:0; 
+    } 
+    50%{ 
+        opacity:1; 
+    } 
+    100%{ 
+        opacity: 0; 
+        bottom:0; 
+    } 
+} 
+.swiper-slide .animated {
+                display: -ms-flexbox;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: box;
+                display: flexbox;
+                display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
+    -moz-box-flex: 1.0; 
+    -webkit-box-flex: 1;
+    box-flex: 1.0;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    padding: 0px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*
+    overflow: hidden;
+    */
+}
+
+.swiper-slide .animated > img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+#btnSign {
+    display: block;
+    background: #eae1c5;
+    height: 50px;
+    width: 80%;
+    color: #c92500;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/*
+    工具
+    ========================================
+*/
+
+.alignFlexStart {
+    -webkit-box-align: start !important;
+    -webkit-align-items: flex-start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+}
+
+.alignFlexEnd {
+    -webkit-box-align: end !important;
+    -webkit-align-items: flex-end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+}
+
+.alignCenter {
+    -webkit-box-align: center !important;
+    -webkit-align-items: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+}
+
+.justifyCenter {
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+}
+
+.justifyFlexEnd {
+    -webkit-box-pack: end !important;
+    -webkit-justify-content: flex-end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+}
+
+.justifyFlexStart {
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+}
+
+.flexBasis5 {
+    -webkit-flex-basis: 5% !important;
+        -ms-flex-preferred-size: 5% !important;
+            flex-basis: 5% !important;
+}
+.flexBasis8 {
+    -webkit-flex-basis: 8% !important;
+        -ms-flex-preferred-size: 8% !important;
+            flex-basis: 8% !important;
+}
+.flexBasis10 {
+    -webkit-flex-basis: 10% !important;
+        -ms-flex-preferred-size: 10% !important;
+            flex-basis: 10% !important;
+}
+
+.flexBasis12{
+    -webkit-flex-basis: 12% !important;
+        -ms-flex-preferred-size: 12% !important;
+            flex-basis: 12% !important;
+}
+
+.flexBasis15 {
+    -webkit-flex-basis: 15% !important;
+        -ms-flex-preferred-size: 15% !important;
+            flex-basis: 15% !important;
+}
+
+.flexBasis20 {
+    -webkit-flex-basis: 20% !important;
+        -ms-flex-preferred-size: 20% !important;
+            flex-basis: 20% !important;
+}
+
+.flexBasis25 {
+    -webkit-flex-basis: 25% !important;
+        -ms-flex-preferred-size: 25% !important;
+            flex-basis: 25% !important;
+}
+
+.flexBasis30 {
+    -webkit-flex-basis: 30% !important;
+        -ms-flex-preferred-size: 30% !important;
+            flex-basis: 30% !important;
+}
+
+.flexBasis35 {
+    -webkit-flex-basis: 35% !important;
+        -ms-flex-preferred-size: 35% !important;
+            flex-basis: 35% !important;
+}
+
+.flexBasis40 {
+    -webkit-flex-basis: 40% !important;
+        -ms-flex-preferred-size: 40% !important;
+            flex-basis: 40% !important;
+}
+
+.flexBasis50 {
+    -webkit-flex-basis: 50% !important;
+        -ms-flex-preferred-size: 50% !important;
+            flex-basis: 50% !important;
+}
+
+.flexBasis60 {
+    -webkit-flex-basis: 60% !important;
+        -ms-flex-preferred-size: 60% !important;
+            flex-basis: 60% !important;
+}
+
+.flexBasis70 {
+    -webkit-flex-basis: 70% !important;
+        -ms-flex-preferred-size: 70% !important;
+            flex-basis: 70% !important;
+}
+
+.flexBasis80 {
+    -webkit-flex-basis: 80% !important;
+        -ms-flex-preferred-size: 80% !important;
+            flex-basis: 80% !important;
+}
+
+.flexBasis100 {
+    -webkit-flex-basis: 100% !important;
+        -ms-flex-preferred-size: 100% !important;
+            flex-basis: 100% !important;
+}

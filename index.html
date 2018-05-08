@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+        <meta name="sharecontent"
+            data-msg-img="http://cdn1.hx168.com.cn/ycf/img/share-logo.jpg"
+            data-msg-title="赢财富：专注者，赢！"
+            data-msg-content="一次仅推荐一只股的证券服务工具"
+            data-msg-callBack=""
+            data-line-img="http://cdn1.hx168.com.cn/ycf/img/share-logo.jpg"
+            data-line-title="赢财富：专注者，赢！"
+            data-line-callBack="" />
+
+        <link rel="shortcut icon" href="favicon.ico" />
+        <title>华西证券赢财富</title>
+        <link rel="stylesheet" href="css/app.min.css?v=1.0.0">
+    </head>
+    <body>
+        <div class="hidden">
+	        <img src="img/hx.jpg?v=1.3" alt=""/>
+        </div>
+        <div id="loader">
+            <div class="loader-inner">
+                <div class="spinner">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1">
+                    <div id="snowDown"></div>
+                    <div id="petalDown"></div>
+                    <div class="alignFlexStart flexBasis50 composition">
+                      <div class="hide flexBasis35 justifyFlexStart" data-animate="animated zoomIn"> 
+                        <img src="img/slide1-text.png" style="width:70%;margin: 70px 0px 0px 45px;max-width:210px">
+                      </div>
+                      <div class="hide flexBasis30" data-animate="animated bounceInDown">
+                       <img src="img/lantern.png" style="width:60%; margin-left:40px;max-width:150px">
+                      </div>
+                      <div class="hide flexBasis5" data-animate="animated zoomIn">
+                        <img src="img/createName.png" style="width:50%; margin: 85px 0px 0px 25px;max-width:10px">
+                      </div>
+                    </div>
+                    <div class="hide justifyCenter flexBasis40" data-animate="animated fadeIn">
+                      <img src="img/GreatWall.png" style="width:90%;max-width:300px">
+                    </div>
+                    <div class="hide justifyCenter flexBasis10"></div>
+                </div>
+
+                <div class="swiper-slide slide2">
+                  <div class="alignFlexStart flexBasis50 composition">
+                    <div class="hide flexBasis35 justifyFlexStart" data-animate="animated zoomIn">
+                      <img src="img/slide2-text.png" style="width:70%;margin: 40px 0px 0px 45px;max-width:210px">
+                    </div>
+                    <div class="hide flexBasis35 justifyFlexEnd" data-animate="animated fadeInRight">
+                      <img src="img/pot.png" style="margin-top: 65px;max-width:100px">
+                    </div>
+                  </div>
+                  <div class="hide flexBasis50 justifyCenter" data-animate="animated zoomIn">
+                    <div class="food" style="background:url(img/food.png) no-repeat center;background-size:contain;width:70%;height:250px;position:relative;">
+                        <div class="hide" style="position:absolute;top:0;right:20%" data-animate="animate-circle">
+                          <img src="img/food1.png" style="max-width:120px">
+                        </div>
+                        <div class="hide" style="position:absolute;bottom:5%;left:0" data-animate="animate-circle">
+                          <img src="img/food2.png" style="max-width:120px">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slide3">
+                    <div class="alignFlexStart flexBasis50 composition">
+                      <div class="hide flexBasis35 justifyFlexStart" data-animate="animated fadeInLeft"> 
+                        <img src="img/palace.png" style="width:50%; margin-top: 135px">
+                      </div>
+                      <div class="hide flexBasis35 justifyFlexEnd" data-animate="animated shake"> 
+                        <img src="img/slide3-text.png" style="width:70%; margin:60px 40px 0 0;">
+                      </div>
+                    </div>
+                    <div class="hide justifyCenter flexBasis50" data-animate="animated fadeInUp">
+                      <img src="img/temple.png" style="width:100%;">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide4">
+                    <div class="hide flexBasis25 justifyCenter" data-animate="animated fadeInRight">
+                        <img src="img/slide4-title.png" style="width:80%; margin-top:30px;max-width:500px;">
+                    </div>
+                    <div class="hide flexBasis5 justifyCenter" data-animate="animated tada">
+                    </div>
+                    <div class="hide flexBasis35 justifyCenter" data-animate="animated tada">
+                       <img src="img/dragon.png" style="width:60%;max-width:225px;">
+                    </div>
+                    <div class="hide flexBasis5 justifyCenter" data-animate="animated tada">
+                    </div>
+                    <div class="hide justifyCenter flexBasis8" data-animate="animated fadeIn">
+                       <img src="img/slide4-text.png" style="width:80%;max-width:160px">    
+                    </div>
+                    <div class="hide justifyCenter flexBasis20" data-animate="animated fadeInUp">
+                        <a class="btn btn-warning" id="btnSign">
+                            立即获取赢财富
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <p class="arrow-up"></p>
+        <script type="text/javascript" src="js/app.min.js?v=1.0.0"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var loader = $("#loader");
+              if(loader && loader.length) {
+                var timer = setTimeout(function(){
+                    clearTimeout(timer);
+                    loader.fadeOut(function(){
+                        activeCurrentItem(1);
+                    });
+                },10);
+              }
+            });
+        </script>
+    </body>
+</html>
